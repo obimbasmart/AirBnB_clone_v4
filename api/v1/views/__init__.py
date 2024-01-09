@@ -9,4 +9,4 @@ from . import users
 from . import states
 from . import amenities
 from . import places
-from . import review
+from . import review, places_amenities
