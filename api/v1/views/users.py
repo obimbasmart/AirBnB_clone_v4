@@ -49,7 +49,7 @@ def create_user():
         abort(400, "Missing password")
     user = User(email=user_data["email"], password=user_data["password"])
     user.save()
-    return make_response(jsonify(user.to_dict()), 200)
+    return make_response(jsonify(user.to_dict()), 201)
 
 
 @app_views.route("/users/<user_id>", methods=["PUT"])
@@ -68,4 +68,4 @@ def update_user(user_id=None):
      for attr in user_data if attr not in ignore_attr]
 
     storage.save()
-    return jsonify(user.to_dict()), 201
+    return jsonify(user.to_dict())
