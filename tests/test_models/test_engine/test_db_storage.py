@@ -67,6 +67,21 @@ test_db_storage.py'])
             self.assertTrue(len(func[1].__doc__) >= 1,
                             "{:s} method needs a docstring".format(func[0]))
 
+    def test_get(self):
+        """Test the storage.get() method"""
+        new_user = User(name="Testing", email="test@gmail.com",
+                        password="test_pwd")
+        new_user.save()
+        new_user_copy = models.storage.get("User", new_user.id)
+        self.assertEqual(new_user_copy.id, new_user.id)
+
+    def test_count(self):
+        """Test the count method"""
+        new_user = User(email="test@gmail.com", password="test_pwd")
+        new_user.save()
+        all_users = models.storage.all(User)
+        self.assertEqual(1, len(all_users))
+
 
 class TestFileStorage(unittest.TestCase):
     """Test the FileStorage class"""
