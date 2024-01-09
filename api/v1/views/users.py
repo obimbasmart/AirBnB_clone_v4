@@ -68,4 +68,4 @@ def update_user(user_id=None):
      for attr in user_data if attr not in ignore_attr]
 
     storage.save()
-    return jsonify(user.to_dict())
+    return jsonify(user.to_dict()), 201
