@@ -42,28 +42,27 @@ def delete_place(place_id):
 
 @app_views.route("/cities/<city_id>/places", methods=["POST"])
 def create_place(city_id):
-    '''Creates the required test case'''
-    if not request.get_json():
-        abort(400, description="Not a JSON")
-
-    if not request.get_json().get('name'):
-        abort(400, description="Missing name")
-
-    user_id = request.get_json().get('user_id')
-
-    if not user_id:
-        abort(400, description="Missing user_id")
-
-    if not storage.get("User", user_id):
+    '''Create a Place object with city_id'''
+    city = storage.get("City", city_id)
+    if not city:
         abort(404)
 
-    if not request.get_json().get('name'):
+    place_data = request.get_json(silent=True)
+    if not place_data:
+        abort(400, description="Not a JSON")
+
+    if "user_id" not in place_data:
+        abort(400, description="Missing user_id")
+
+    user = storage.get("User", place_data["user_id"])
+    if not user:
+        abort(404)
+
+    if "name" not in place_data:
         abort(400, description="Missing name")
 
-    place = Place()
-    place.name = request.get_json()['name']
-    place.city_id = city_id
-    place.user_id = user_id
+    place = Place(name=place_data["name"],
+                  city_id=city_id, user_id=place_data["user_id"])
     place.save()
     return make_response(jsonify(place.to_dict()), 201)
 
