@@ -59,4 +59,5 @@ def get_review(review_id):
     [setattr(review, key, val)
      for key, val in review_data.items() if key not in ignore_attrs]
 
+    storage.save()
     return jsonify(review.to_dict()), 200
