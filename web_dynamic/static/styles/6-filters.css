@@ -131,3 +131,14 @@ section.filter .amenities .popover > li{
     margin: 0 auto 5px 10px;
     line-height: 1.5rem;
 }
+
+section.filter .amenities .popover > li  input {
+    margin-right: 10px;
+}
+
+@media screen and (min-width: 1028px) {
+
+    section.filter .amenities {
+        width: 400px;
+    }
+}
