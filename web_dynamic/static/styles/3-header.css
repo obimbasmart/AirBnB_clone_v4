@@ -1,0 +1,21 @@
+header {
+    width: 100%;
+    height: 70px;
+    background-color: #FFFFFF;
+
+    border-bottom: 1px solid #CCCCCC;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    background-image: url("../images/logo.png");
+    width: 142px;
+    height: 60px;
+    margin-left: 20px;
+
+}
+

@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+section.places {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;;
+    align-items: center;
+}
+
+section.places div.article-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+} 
+
+.article-container > article {
+    width: 390px;
+    text-align: center;
+    padding: 13px 20px;
+    margin: 20px;
+    border: 1px solid  #FF5A5F;
+    border-radius: 4px;
+    overflow: hidden;
+
+}
+
+section.places > h1 {
+    font-size: 30px;
+    align-self: flex-start;
+    margin: 0;
+    margin-top: 20px;
+}
+
+
+.article_header {
+        display: flex;
+        width: 100%;
+        margin: 0;
+        margin-top: 0;
+        justify-content: space-between;
+        align-items: center;
+}
+
+.article_header .price_by_night {
+    color:  #FF5A5F;
+    border: 3.5px solid  #FF5A5F;
+    min-width: 57px;
+    height: 57px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-sizing: content-box;
+    padding: 3px;
+}
+
+.article_header > h2 {
+    font-size: 30px;
+    text-align: center;
+    display: inline-block;
+    text-align: left;
+}
+
+.price_by_night p {
+    margin: 0;
+}
+
+
+
+.information {
+    height: 80px;
+    border-top: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin-top: 10px;
+
+}
+
+.information > div {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.information .icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+.information > div > p {
+    margin-top: 0;
+}
+.information .max_guest .icon {
+    background-image: url("../images/icon_group.png");
+}
+
+.information .number_rooms .icon {
+    background-image: url("../images/icon_bed.png");
+}
+
+.information .number_bathrooms .icon {
+    background-image: url("../images/icon_bath.png");
+}
+
+.user {
+    text-align: left;
+}
+.user .user_name {
+    font-weight: bold;
+}
+
+article .description {
+    text-align: initial;
+    line-height: 1.3em;
+}
