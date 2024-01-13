@@ -10,7 +10,7 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 app.url_map.strict_slashes = False
-CORS(app, resources={"/api/*": {"origins": "0.0.0.0"}})
+CORS(app, resources={r"/api/v1/*": {"origins": "*"}})
 
 
 @app.errorhandler(404)

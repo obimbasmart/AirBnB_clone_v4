@@ -19,3 +19,14 @@ header {
 
 }
 
+#api_status {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #cccccc;
+    margin-right: 30px;
+}
+
+.available {
+    background: #ff545f;
+}
