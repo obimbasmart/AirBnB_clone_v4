@@ -2,6 +2,7 @@
     /* border: 1px solid black; */
     box-sizing: border-box;
 }
+
 .filter {
     width: 100%;
     height: 70px;
@@ -15,7 +16,7 @@
 }
 
 .filter button {
-    background-color:  #FF5A5F;
+    background-color: #FF5A5F;
     color: #FFFFFF;
     font-size: 18px;
     height: 48px;
@@ -44,8 +45,8 @@ section.filter .amenities {
 }
 
 section.filter div:first-child {
-    border-right: 1px solid  #DDDDDD;
-    
+    border-right: 1px solid #DDDDDD;
+
 }
 
 section.filter .amenities {
@@ -82,11 +83,14 @@ section.filter div h4 {
     max-height: 300px;
 
     overflow-y: scroll;
-    scrollbar-width: none;  /* Firefox */
-    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
 
-    
+
 }
+
 /* Hiding scrollbar for Chrome, Safari and Opera */
 .popover::-webkit-scrollbar {
     display: none;
@@ -94,7 +98,7 @@ section.filter div h4 {
 
 
 
-ul.popover > li {
+ul.popover>li {
     margin-left: -10px;
     /* border: 1px solid black; */
 }
@@ -102,11 +106,11 @@ ul.popover > li {
 
 
 
-ul.popover > ul {
+ul.popover>ul {
     margin-bottom: 10px;
 }
 
-ul.popover > li h2 {
+ul.popover>li h2 {
     font-size: 16px;
     margin: 0;
 }
@@ -127,12 +131,12 @@ ul.popover li {
     list-style: none;
 }
 
-section.filter .amenities .popover > li{
+section.filter .amenities .popover>li {
     margin: 0 auto 5px 10px;
     line-height: 1.5rem;
 }
 
-ul.popover li  input {
+ul.popover li input {
     margin-right: 10px;
 }
 
@@ -149,5 +153,13 @@ ul.popover li h2 {
 
     section.filter .amenities {
         width: 400px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    section.filter .amenities,
+    section.filter .locations {
+        visibility: hidden;
     }
 }

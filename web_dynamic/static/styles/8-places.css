@@ -6,7 +6,8 @@
 section.places {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;;
+    justify-content: flex-start;
+    ;
     align-items: center;
 }
 
@@ -16,20 +17,20 @@ section.places div.article-container {
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-} 
+}
 
-.article-container > article {
+.article-container>article {
     width: 390px;
     text-align: center;
     padding: 13px 20px;
     margin: 20px;
-    border: 1px solid  #FF5A5F;
+    border: 1px solid #FF5A5F;
     border-radius: 4px;
     overflow: hidden;
 
 }
 
-section.places > h1 {
+section.places>h1 {
     font-size: 30px;
     align-self: flex-start;
     margin: 0;
@@ -38,17 +39,17 @@ section.places > h1 {
 
 
 .article_header {
-        display: flex;
-        width: 100%;
-        margin: 0;
-        margin-top: 0;
-        justify-content: space-between;
-        align-items: center;
+    display: flex;
+    width: 100%;
+    margin: 0;
+    margin-top: 0;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .article_header .price_by_night {
-    color:  #FF5A5F;
-    border: 3.5px solid  #FF5A5F;
+    color: #FF5A5F;
+    border: 3.5px solid #FF5A5F;
     min-width: 57px;
     height: 57px;
     border-radius: 50%;
@@ -60,7 +61,7 @@ section.places > h1 {
     padding: 3px;
 }
 
-.article_header > h2 {
+.article_header>h2 {
     font-size: 30px;
     text-align: center;
     display: inline-block;
@@ -86,7 +87,7 @@ section.places > h1 {
 
 }
 
-.information > div {
+.information>div {
     width: 100px;
     display: flex;
     flex-direction: column;
@@ -101,9 +102,10 @@ section.places > h1 {
     margin-top: 5px;
 }
 
-.information > div > p {
+.information>div>p {
     margin-top: 0;
 }
+
 .information .max_guest .icon {
     background-image: url("../images/icon_group.png");
 }
@@ -119,6 +121,7 @@ section.places > h1 {
 .user {
     text-align: left;
 }
+
 .user .user_name {
     font-weight: bold;
 }
@@ -126,4 +129,48 @@ section.places > h1 {
 article .description {
     text-align: initial;
     line-height: 1.3em;
+}
+
+article .reviews>h2,
+article .amenities>h2 {
+    text-align: left;
+    padding-bottom: 5px;
+    padding-left: 0;
+}
+
+.reviews>ul li {
+    list-style: none;
+    margin: 0;
+    display: block;
+}
+
+.reviews>ul {
+    padding: 0;
+    text-align: left;
+    display: none;
+}
+
+.reviews>ul li h3 {
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.reviews>ul li p {
+    margin-top: 2px;
+}
+
+.show_hide {
+    color: #989898;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 400px) {
+    .article-container>article {
+        width: 65%;
+    }
+
+    section.places>h1 {
+        margin-left: 10px;
+    }
 }
