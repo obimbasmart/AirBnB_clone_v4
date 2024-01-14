@@ -98,6 +98,7 @@ def get_place_by_filter():
     if request_data is None:
         abort(400, "Not a JSON")
 
+    print(request_data)
     state_ids = request_data.get("states")
     if state_ids:
         place_filter = filter_place_by_state_ids(all_places, state_ids)
