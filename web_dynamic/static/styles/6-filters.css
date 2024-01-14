@@ -132,7 +132,16 @@ section.filter .amenities .popover > li{
     line-height: 1.5rem;
 }
 
-section.filter .amenities .popover > li  input {
+ul.popover li  input {
+    margin-right: 10px;
+}
+
+ul.popover li h2 {
+    display: inline;
+}
+
+.state_checkbox,
+.city_checkbox {
     margin-right: 10px;
 }
 
